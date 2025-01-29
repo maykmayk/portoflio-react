@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portoflio-react/static/css/main.941adcb9.css",
+    "main.js": "/portoflio-react/static/js/main.695ba852.js",
+    "static/js/488.2d3131de.chunk.js": "/portoflio-react/static/js/488.2d3131de.chunk.js",
+    "static/media/InterTight-VariableFont_wght.ttf": "/portoflio-react/static/media/InterTight-VariableFont_wght.1a6637707f1f349e23bb.ttf",
+    "static/media/InstrumentSerif-Regular.ttf": "/portoflio-react/static/media/InstrumentSerif-Regular.dd726bb91a354547f0d3.ttf",
+    "index.html": "/portoflio-react/index.html",
+    "main.941adcb9.css.map": "/portoflio-react/static/css/main.941adcb9.css.map",
+    "main.695ba852.js.map": "/portoflio-react/static/js/main.695ba852.js.map",
+    "488.2d3131de.chunk.js.map": "/portoflio-react/static/js/488.2d3131de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.941adcb9.css",
+    "static/js/main.695ba852.js"
+  ]
+}
