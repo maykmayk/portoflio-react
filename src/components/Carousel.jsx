@@ -25,66 +25,80 @@ const Carousel = () => {
     }, []);
 
     return (
-        <div className="w-100 mt-5 swiper-container">
-            <Swiper
-                spaceBetween={10}
-                loop={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                breakpoints={{
-                    0: {
-                        slidesPerView: 3,
-                    },
-                    600: {
-                        slidesPerView: 4,
-                    },
-                    1000: {
-                        slidesPerView: 6,
-                    },
-                    1200: {
-                        slidesPerView: 7,
-                    }
-                }}
-                onSlideChange={(swiper) => {
-                    const currentItem = swiper.realIndex;
-                    const currentSlide = swiper.slides[currentItem];
+        <div className='d-flex flex-column align-items-end gap-3'>
+            <div className="w-100 mt-5 swiper-container">
+                <Swiper
+                    spaceBetween={10}
+                    loop={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 3,
+                        },
+                        600: {
+                            slidesPerView: 4,
+                        },
+                        1000: {
+                            slidesPerView: 6,
+                        },
+                        1200: {
+                            slidesPerView: 7,
+                        }
+                    }}
+                    onSlideChange={(swiper) => {
+                        const currentItem = swiper.realIndex;
+                        const currentSlide = swiper.slides[currentItem];
 
-                    if (currentSlide) {
-                        const animatedImage = currentSlide.querySelector('.animated-image');
+                        if (currentSlide) {
+                            const animatedImage = currentSlide.querySelector('.animated-image');
 
-                        if (animatedImage) {
-                            if (swiper.previousIndex > currentItem) {
-                                animatedImage.style.transform = 'translateZ(-50px)';
-                            } else {
-                                animatedImage.style.transform = 'translateZ(50px)';
+                            if (animatedImage) {
+                                if (swiper.previousIndex > currentItem) {
+                                    animatedImage.style.transform = 'translateZ(-50px)';
+                                } else {
+                                    animatedImage.style.transform = 'translateZ(50px)';
+                                }
                             }
                         }
-                    }
-                }}
-            >
-                {projects.map((project) => (
-                    <SwiperSlide key={project.name_id}>
-                        <Link to={`/work-details/${project.name_id}`}>
-                            <img
-                                src="assets/images/logo_white.png"
-                                alt="Mini Logo"
-                                className="mini-logo"
-                                loading="lazy"
-                            />
-                            <div className="rect">
+                    }}
+                >
+                    {projects.map((project) => (
+                        <SwiperSlide key={project.name_id}>
+                            <Link to={`/work-details/${project.name_id}`}>
                                 <img
-                                    src={project.vertical_img}
-                                    alt={project.name_id}
-                                    className="image animated-image"  // Assicurati che la classe sia qui
+                                    src="assets/images/logo_white.png"
+                                    alt="Mini Logo"
+                                    className="mini-logo"
                                     loading="lazy"
                                 />
-                            </div>
-                        </Link>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                                <div className="rect">
+                                    <img
+                                        src={project.vertical_img}
+                                        alt={project.name_id}
+                                        className="image animated-image"  // Assicurati che la classe sia qui
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </Link>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+            <div className="lineIntro p-0 col-12 col-md-2 text-end d-flex align-items-end justify-content-end px-3">
+                <Link to="/works" className="fs-6 email hover-underline-animation">
+                    See all works
+                    <img
+                        src="assets/images/icons/arrow-down-right.svg"
+                        className="arrow"
+                        alt="Arrow"
+                        draggable="false"
+                        loading="lazy"
+                    />
+                </Link>
+            </div>
         </div>
     );
 };

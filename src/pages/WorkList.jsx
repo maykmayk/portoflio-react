@@ -25,9 +25,9 @@ const ProjectItem = ({ project, prevMargin, setPrevMargin }) => {
 
   useEffect(() => {
     if (window.innerWidth > 768) {
-      let random = Math.floor(Math.random() * (35 - 5 + 1)) + 5;
+      let random = Math.floor(Math.random() * (35 - 10 + 1)) + 10;
       if (prevMargin !== null) {
-        random = Math.max(5, Math.min(35, prevMargin + Math.floor(Math.random() * 11) - 5));
+        random = Math.max(10, Math.min(35, prevMargin + Math.floor(Math.random() * 11) - 10));
       }
       setPrevMargin(random);
       setMargin(`${random}vw`); 
