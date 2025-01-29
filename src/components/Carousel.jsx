@@ -14,7 +14,8 @@ const Carousel = () => {
             try {
                 const response = await fetch('./data/projects.json');
                 const data = await response.json();
-                setProjects(data);
+                // Raddoppia l'array dei progetti
+                setProjects([...data, ...data]);
             } catch (error) {
                 console.error('Errore nel caricare i progetti:', error);
             }
@@ -40,7 +41,10 @@ const Carousel = () => {
                         slidesPerView: 4,
                     },
                     1000: {
-                        slidesPerView: 5,
+                        slidesPerView: 6,
+                    },
+                    1200: {
+                        slidesPerView: 7,
                     }
                 }}
                 onSlideChange={(swiper) => {
