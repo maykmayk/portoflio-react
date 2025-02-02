@@ -74,6 +74,7 @@ const Carousel = () => {
                                     className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-12 h-12"
                                     loading="lazy"
                                 />
+                                {/* miao */}
                                 <div className="rect">
                                     <img
                                         src={project.vertical_img}
