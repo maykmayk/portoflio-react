@@ -68,7 +68,6 @@ const Carousel = () => {
                     {projects.map((project) => (
                         <SwiperSlide key={project.name_id} className="group relative">
                             <Link to={`/work-details/${project.name_id}`} className="block">
-                                {/* Logo bianco, nascosto di default e visibile solo all'hover */}
                                 <img
                                     src="assets/images/logo_white.png"
                                     alt="Mini Logo"
@@ -76,7 +75,6 @@ const Carousel = () => {
                                     loading="lazy"
                                 />
                                 <div className="rect">
-                                    {/* Immagine principale */}
                                     <img
                                         src={project.vertical_img}
                                         alt={project.name_id}
